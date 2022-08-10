@@ -11,7 +11,7 @@ contract Web3RSVP {
         string eventDataCID
     );
 
-    event NewRSVP(bytes eventID, address attendeeAddress);
+    event NewRSVP(bytes32 eventID, address attendeeAddress);
 
     event ConfirmedAttendee(bytes32 eventID, address attendeeAddress);
 
