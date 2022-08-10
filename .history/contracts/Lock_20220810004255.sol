@@ -2,7 +2,7 @@
 pragma solidity ^0.8.9;
 
 contract Web3RSVP {
-    event NewEventCreated(
+    event createNewEvent(
         bytes32 eventID, 
         address creatorAddress, 
         uint256 eventTimestamp, 

@@ -2,7 +2,7 @@
 pragma solidity ^0.8.9;
 
 contract Web3RSVP {
-    event NewEventCreated(
+    event createNewEvent(
         bytes32 eventID, 
         address creatorAddress, 
         uint256 eventTimestamp, 
@@ -138,8 +138,6 @@ address[] memory claimedRSVPs;
             }
 
             require(sent, "Failed to send Ether");
-
-            emit ConfirmedAttendee(eventId, attendee);
         }
             
         function confirmAllAttendees(bytes32 eventId) external {
@@ -188,8 +186,6 @@ address[] memory claimedRSVPs;
             }
 
             require(sent, "Failed to send Ether");
-
-            emit DepositsPaidOut(eventId);
         }
 
 
