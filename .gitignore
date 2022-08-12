@@ -5,6 +5,18 @@ coverage.json
 typechain
 typechain-types
 
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# System Files
+.DS_Store
+Thumbs.db
+
 #Hardhat files
 cache
 artifacts

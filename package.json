@@ -4,6 +4,7 @@
   "description": "RSVP dapp",
   "main": "index.js",
   "scripts": {
+    "script": "node scripts/run.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
