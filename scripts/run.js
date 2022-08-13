@@ -1,7 +1,7 @@
 const hre = require("hardhat");
 
 const main = async () => {
-    const rsvpContractFactory = await hre.ethers.getContractFactory("Web3RSVP");
+    const rsvpContractFactory = await hre.ethers.getContractFactory('Web3RSVP');
     const rsvpContract = await rsvpContractFactory.deploy();
     await rsvpContract.deployed();
     console.log("Contract deployed to:", rsvpContract.address);
@@ -25,19 +25,19 @@ const main = async () => {
     let eventID = wait.events[0].args.eventID;
     console.log("EVENT ID:", eventID);
     
-    txn = await rsvpContract.createNewEvent(eventID, { value: deposit });
+    txn = await rsvpContract.createNewRSVP(eventID, { value: deposit });
     wait = await txn.wait();
     console.log("NEW RSVP:", wait.events[0].event, wait.events[0].args);
     
     txn = await rsvpContract
         .connect(address1)
-        .createNewEvent(eventID, { value: deposit});
+        .createNewRSVP(eventID, { value: deposit});
     wait = await txn.wait();
     console.log("NEW RSVP:", wait.events[0].event, wait.events[0].args);
 
     txn = await rsvpContract
         .connect(address2)
-        .createNewEvent(eventID, { value: deposit});
+        .createNewRSVP(eventID, { value: deposit});
     wait = await txn.wait();
     console.log("NEW RSVP:", wait.events[0].event, wait.events[0].args);
     
